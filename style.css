@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero__section{
+    background: url(/images/heroSectionBackground.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 60vh;
+    transition: 2ms; 
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 16px 48px;
+}
+
+.navbar a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.navbar .menu__container{
+    display: flex;
+    gap: 29px;
+}
+
+.navbar .menu__container .user__icon{
+    height: 28px;
+    width: 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: solid white 2px;
+    display: none;
+}
+
+.hero__section__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    height: calc(60vh - 60px);
+    padding: 10px;
+}
+
+.hero__section__logo{
+    width:260px;
+}
+
+.hero__section__title{
+    font-weight: 400;
+    font-size: 30px ;
+    text-align: center;
+}
+
+.hero__section__input__container{
+    background: white;
+    width:60%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    gap:10px;
+    padding: 10px;
+}
+
+.input__container__location,
+.input__container__search{
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.input__container__location{
+    width: 35%;
+    border-right: 2px solid #e0e0e0;
+}
+
+.input__container__search{
+    width: 65%;
+}
+
+@media only screen and (max-width:600px){
+    .navbar .menu__container .user__icon{
+        display: flex;
+    }
+
+    .link{
+        display: none;
+    }
+
+    .hero__section{
+        height: 80vh;
+    }
+
+    .navbar{
+        padding: 16px ;
+    }
+
+    .hero__section__input__container{
+        background: transparent;
+        flex-direction: column;
+        width:100%;
+    }
+  
+    .input__container__location,
+    .input__container__search{
+        padding: 10px;
+        border-radius: 5px;
+        width: 95%;
+    }
+
+    .hero__section__container{
+        height: calc(80vh -60px);
+    }
+
+    .hero__section__title{
+        font-size: 20px;
+        width: 95%;
+    }
+}
